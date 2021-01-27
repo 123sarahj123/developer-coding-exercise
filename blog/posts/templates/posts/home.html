@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Sarah's Awesome Blog Website</title>
+</head>
+<body>
+    <h1>Sarah's Awesome Blog Website</h1>
+    <ul>
+    <li>Not *super* awesome though because these hyperlinks don't go anywhere.</li>
+    <li>Please put the slug directly into the URL (i.e. "../posts/people-do-good/").</li>
+    <li>Currently my tag counter algorithm has a wee bug in it, so you will see that in the tag list.</li>
+    <li>Try using both valid/invalid slug names. </li>
+    <li>There are lots of comments throughout the code explaining what could be better, and what is incomplete :) thank you for your time.</li>
+</ul>
+
+    <h3>
+        {% for blogPost in posts %}
+
+        <a href="/assets/posts/{{ blogPost }}">{{ blogPost }}</a>
+        <br>
+        {% endfor %}
+    </h3>
+</body>
+</html>

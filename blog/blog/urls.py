@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from posts.views import posts
+from posts.views import post
 
 urlpatterns = [
-    path(r'', posts, name='home'),
-    path(r'admin/', admin.site.urls),
+    path(r'', posts, name='blog-posts'),
     path(r'posts/', include('posts.urls')),
+    path(r'admin/', admin.site.urls),
 ]
